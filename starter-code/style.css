@@ -1,5 +1,116 @@
 @import url('https://fonts.googleapis.com/css2?family=Ibarra+Real+Nova:wght@400;700&family=Public+Sans&display=swap');
 
-/* font-family: 'Ibarra Real Nova', serif;
-font-family: 'Public Sans', sans-serif; */
+:root{
+   --primary-cyan: #5fb4a2;
+   --dark-blue: #203a4c;
+   --gray-dark-blue: #33323d;
+   --bg-light-gray: #fafafa;
+   --txt-field-light-gray: #eaeaea;
+   --error-red: #f43030;
+  }
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  font-family: 'Public Sans', sans-serif;
+  line-height: 30px;
+  font-size: 16px;
+}
+.container{
+  width: 95%;
+  margin: 0 auto;
+}
+h1{
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bold;
+  font-size: 50px;
+  line-height: 50px;
+  letter-spacing: -0.45px;
+}
+h2{
+  font-family: 'Ibarra Real Nova', serif;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 42px;
+  letter-spacing: -0.36px;
+}
+h3{
+  font-family: 'Ibarra Real Nova', serif;
+  font-size: 32px;
+  line-height: 36px;
+  letter-spacing: -0.29px;
+}
 
+.btn-primary{
+  width: 200px;
+  height: 48px;
+  background-color: var(--dark-blue);
+}
+.btn-primary:hover{
+  background-color: var(--primary-cyan);
+}
+.btn-primary:disabled{
+  background-color: var(--txt-field-light-gray);
+}
+.btn-secondary{
+  width: 162px;
+  height: 48px;
+  background-color: #fff;
+  border: var(--gray-dark-blue);
+}
+.btn-secondary:hover{
+  background-color: var(--gray-dark-blue);
+}
+.btn-secondary:disabled{
+  background-color: var(--bg-light-gray);
+} 
+
+input{
+  width: 240px;
+  height: 86px;
+  background-color: var(--txt-field-light-gray);
+}
+textarea:active, input:active{
+  border: 1px solid var(--primary-cyan);
+}
+textarea:blank, input:blank{
+  border: 1px solid var(--error-red);
+}
+textarea{
+  width: 237px;
+  height: 72px;background-color: var(--txt-field-light-gray);
+}
+
+/* Navbar */
+.navbar{
+  display: flex;
+  justify-content: space-between;
+}
+.navbar .navbar-list{
+  display: flex;
+}
+.navbar .navbar-list .navbar-list-item{
+  list-style: none;
+  margin: 0 15px;
+  color: var(--gray-dark-blue);
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+.navbar .navbar-list .navbar-list-item:hover{
+  color: var(--primary-cyan);
+  cursor: pointer;
+}
+.navbar .navbar-list .navbar-list-item:last-child{
+  margin-right: unset;
+}
+
+/* Home */
+.home-page {}
+.home-page .section{
+  margin: 50px auto;
+}
+
+/* Footer */
