@@ -95,6 +95,13 @@ hr{
   height: 1px;
   border: 0;
 }
+a{
+  color: unset;
+  text-decoration: unset;
+}
+.section{
+  margin: 40px auto;
+}
 /* Navbar */
 .navbar{
   display: flex;
@@ -122,10 +129,8 @@ hr{
   margin-right: unset;
 }
 
-/* Home */
-.home-page .section{
-  margin: 40px auto;
-}
+/* Home Page */
+
 .home-page .hero{
   display: flex;
   position: relative;
@@ -164,7 +169,6 @@ hr{
   width: 48px;
   height: 48px;
   line-height: 48px;
-  /* background-color: var(--gray-dark-blue); */
 }
 .home-page .hero .details button:hover .icon svg g{
   stroke: #fff;
@@ -211,8 +215,43 @@ hr{
 .contact button{
   text-transform: uppercase;
 }
-/* Footer */
 
+/* Portfolio Page */
+
+.portfolio-page .section{
+  margin-top: 100px !important;
+  display: flex;
+}
+.portfolio-page .section:nth-child(even){
+  flex-direction: row-reverse;
+}
+.portfolio-page>div img{
+  background-size: cover;
+  width: 540px;
+  height: 500px;
+}
+.portfolio-page .details{
+  height: 500px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.portfolio-page .section:nth-child(even) .details{
+  margin-left: 75px;
+  margin-right: 75px;
+}
+.portfolio-page .details h2{
+  margin: 50px 0 30px 0;
+}
+.portfolio-page .details p{
+  padding-right: 70px;
+}
+.portfolio-page .details button{
+  margin-bottom: 50px ;
+  text-transform: uppercase;
+}
+/* Footer */
 footer {
   background-color: var(--gray-dark-blue);
   margin-top: 150px !important;
