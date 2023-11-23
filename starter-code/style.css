@@ -19,7 +19,7 @@ body{
   font-size: 16px;
 }
 .container{
-  width: 95%;
+  width: 1110px;
   margin: 0 auto;
 }
 h1{
@@ -42,14 +42,19 @@ h3{
   line-height: 36px;
   letter-spacing: -0.29px;
 }
-
+button:hover{
+  cursor: pointer;
+  border: none;
+}
 .btn-primary{
-  width: 200px;
+  width: 200px;        
   height: 48px;
   background-color: var(--dark-blue);
+  border: none;
 }
 .btn-primary:hover{
   background-color: var(--primary-cyan);
+  border-color: var(--primary-cyan);
 }
 .btn-primary:disabled{
   background-color: var(--txt-field-light-gray);
@@ -58,15 +63,18 @@ h3{
   width: 162px;
   height: 48px;
   background-color: #fff;
-  border: var(--gray-dark-blue);
+  border:1px solid var(--gray-dark-blue);
 }
 .btn-secondary:hover{
   background-color: var(--gray-dark-blue);
+  color: var(--bg-light-gray);
 }
 .btn-secondary:disabled{
   background-color: var(--bg-light-gray);
 } 
-
+ul li{
+  list-style-type: none;
+}
 input{
   width: 240px;
   height: 86px;
@@ -82,22 +90,29 @@ textarea{
   width: 237px;
   height: 72px;background-color: var(--txt-field-light-gray);
 }
-
+hr{
+  background-color: #e3e3e3;
+  height: 1px;
+  border: 0;
+}
 /* Navbar */
 .navbar{
   display: flex;
   justify-content: space-between;
+  padding-top: 40px;
 }
 .navbar .navbar-list{
   display: flex;
 }
 .navbar .navbar-list .navbar-list-item{
-  list-style: none;
   margin: 0 15px;
   color: var(--gray-dark-blue);
   text-transform: uppercase;
   font-size: 12px;
   letter-spacing: 2px;
+}
+.navbar .navbar-list .navbar-list-item.active{
+  color: var(--primary-cyan);
 }
 .navbar .navbar-list .navbar-list-item:hover{
   color: var(--primary-cyan);
@@ -108,9 +123,138 @@ textarea{
 }
 
 /* Home */
-.home-page {}
 .home-page .section{
-  margin: 50px auto;
+  margin: 40px auto;
+}
+.home-page .hero{
+  display: flex;
+  position: relative;
+}
+.home-page .hero .hero-image{
+  width: 100%;
+}
+.home-page .hero .hero-image img{
+  background-size: cover;
+  overflow-y: hidden;
+  width: 100%;
+}
+.home-page .hero .details{
+  position: absolute;
+  bottom: 10px;
+}
+.home-page .hero .details{
+  width: 445px;
+  height: 357px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.home-page .hero .details h1{
+  margin-top: 20px;
+  padding-right: 50px;
+}
+.home-page .hero .details button{
+  color: #fff;
+  text-transform: uppercase;
+  line-height: 48px;
+}
+.home-page .hero .details button .icon{
+  float: left;
+  width: 48px;
+  height: 48px;
+  line-height: 48px;
+  /* background-color: var(--gray-dark-blue); */
+}
+.home-page .hero .details button:hover .icon svg g{
+  stroke: #fff;
 }
 
+.about-me{
+  margin-top: 150px !important;
+  display: flex;
+}
+.about-me .profile-image img{
+  background-size: cover;
+  width: 540px;
+  height: 610px;
+}
+.about-me .details{
+  height: 610px;
+  margin-left: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.about-me .details h2{
+  margin: 50px 0 30px 0;
+}
+.about-me .details p{
+  padding-right: 70px;
+}
+.about-me .details button{
+  margin-bottom: 50px ;
+  text-transform: uppercase;
+}
+.contact{
+  margin-top: 150px !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.contact h2{
+  width: 350px;
+}
+.contact hr{
+  width: 47%;
+}
+.contact button{
+  text-transform: uppercase;
+}
 /* Footer */
+
+footer {
+  background-color: var(--gray-dark-blue);
+  margin-top: 150px !important;
+  height: 80px;
+}
+footer .footer-navs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  line-height: 80px;
+}
+footer .footer-navs .footer-list{
+  display: flex;
+  color: #fff;
+}
+footer .footer-navs .footer-list .footer-logo{
+  margin-right: 20px;
+  height: 80px;
+  display: inline-block;
+  line-height: 80px;
+}
+footer .footer-navs .footer-list .footer-list-item {
+  margin: 0 25px;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+footer .footer-navs .footer-socials .footer-socials-item {
+  margin: 0 10px;
+  height: 80px;
+  line-height: 80px;
+  display: inline-block;
+}
+footer .footer-navs .footer-socials .footer-socials-item:last-child {
+  margin-right: 0;
+}
+footer .footer-navs .footer-list .footer-list-item:hover {
+  cursor: pointer;
+  color:var(--primary-cyan);
+}
+footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
+  fill: var(--primary-cyan);
+  cursor: pointer;
+}
