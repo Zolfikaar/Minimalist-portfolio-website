@@ -341,6 +341,11 @@ a{
 .manage-page .previouse-next .next {
   display: flex;
   align-items: center;
+  cursor: pointer;
+}
+.manage-page .previouse-next .previouse:hover .holder span,
+.manage-page .previouse-next .next:hover .holder span{
+  text-decoration: underline;
 }
 .manage-page .previouse-next .previouse .holder
 {
@@ -348,6 +353,46 @@ a{
 }
 .manage-page .previouse-next .next .holder{
   margin-right: 15px;
+}
+
+/* Contact Page */
+.contact-page{
+  margin: 50px 0;
+}
+.contact-page .intro,
+.contact-page .contact-form{
+  display: flex;
+  justify-content: space-between;
+}
+.contact-page .intro .right-side,
+.contact-page .contact-form .right-side{
+  width: 635px;
+}
+.contact-page .contact-form .right-side form .form-item:not(:first-child){
+  margin: 20px 0;
+}
+.contact-page .contact-form .right-side form .form-item label{
+  font-weight: bold;
+  font-size: 13px;
+  line-height: 30px;
+}
+.contact-page .contact-form .right-side form .form-item input{
+  height: 48px;
+}
+.contact-page .contact-form .right-side form .form-item textarea{
+  height: 96px;
+
+}
+.contact-page .contact-form .right-side form .form-item input,
+.contact-page .contact-form .right-side form .form-item textarea{
+  width: 100%;
+  border: none;
+  padding: 10px;
+}
+.contact-page .contact-form .right-side form button{
+  color: #fff;
+  text-transform: uppercase;
+  margin-top: 20px;
 }
 /* Footer */
 footer {
@@ -394,4 +439,18 @@ footer .footer-navs .footer-list .footer-list-item:hover {
 footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   fill: var(--primary-cyan);
   cursor: pointer;
+}
+
+
+
+/* mobile screen */
+@media screen and (max-width: 375px) {
+  
+  
+}
+
+/* tablet screen */
+@media screen and  (max-width: 676px) {
+  
+  
 }
