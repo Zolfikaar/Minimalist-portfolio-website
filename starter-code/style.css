@@ -253,25 +253,28 @@ a{
 }
 
 /* Manage-project Page */
+/* Bookmark-project Page */
+.bookmark-page,
 .manage-page{
   margin-top: 100px;
 }
+.bookmark-page .project-image .bookmark-image img,
 .manage-page .project-image .manage-image img{
   height: 500px;
   width: 100%;
   background-size: cover;
 }
+.bookmark-page .project-details,
 .manage-page .project-details {
   display: flex;
   margin-top: 100px;
 }
-
-
-
+.bookmark-page .project-details .project-summary,
 .manage-page .project-details .project-summary{
   width: 40%;
   display: flex;
 }
+.bookmark-page .project-details .project-summary .details,
 .manage-page .project-details .project-summary .details{
   height: 500px;
   margin-right: 50px;
@@ -279,49 +282,61 @@ a{
   flex-direction: column;
   justify-content: space-between;
 }
+.bookmark-page .project-details .project-summary .details h2,
 .manage-page .project-details .project-summary .details h2{
   margin: 50px 0 30px 0;
 }
+.bookmark-page .project-details .project-summary .details p,
 .manage-page .project-details .project-summary .details p{
-  /* padding-right: 30px; */
   font-size: 15px;
 }
+.bookmark-page .project-details .project-summary .details .tech-stack-info,
 .manage-page .project-details .project-summary .details .tech-stack-info{
   margin: 57px 0 20px 0;
 }
+.bookmark-page .project-details .project-summary .details .tech-stack-info p.tech-info,.bookmark-page .project-details .project-summary .details .tech-stack-info p.stack,
 .manage-page .project-details .project-summary .details .tech-stack-info p.tech-info,.manage-page .project-details .project-summary .details .tech-stack-info p.stack{
   color: var(--primary-cyan);
   font-weight: bold;
   font-size: 16px;
   padding: unset;
 }
+.bookmark-page .project-details .project-summary .details .tech-stack-info p.stack,
 .manage-page .project-details .project-summary .details .tech-stack-info p.stack{
   margin-top: 20px;
 }
+.bookmark-page .project-details .project-summary .details button,
 .manage-page .project-details .project-summary .details button{
   margin-bottom: 50px ;
   text-transform: uppercase;
 }
+.bookmark-page .project-details .project-background,
 .manage-page .project-details .project-background{
   width: 61%;
 }
+.bookmark-page .project-details .project-background h3,
 .manage-page .project-details .project-background h3{
   line-height: 42px;
 }
+.bookmark-page .project-details .project-background .description,
 .manage-page .project-details .project-background .description{
   margin: 40px 0;
 }
+.bookmark-page .project-details .project-background .previews,
 .manage-page .project-details .project-background .previews{
   margin-bottom: 30px;
 }
+.bookmark-page .project-details .project-background .project-previews img,
 .manage-page .project-details .project-background .project-previews img{
   background-size: cover;
   width: 100%;
   height: 400px;
 }
+.bookmark-page .project-details .project-background .project-previews img:first-child,
 .manage-page .project-details .project-background .project-previews img:first-child{
   margin-bottom: 20px;
 }
+.bookmark-page .previouse-next,
 .manage-page .previouse-next {
   display: flex;
   justify-content: space-between;
@@ -330,27 +345,35 @@ a{
   border-bottom: 1px solid ;
   border-color: #33323d21;
 }
+.bookmark-page .previouse-next .divider,
 .manage-page .previouse-next .divider{
   width: 1px;
   height: 130px;
   background-color: var(--gray-dark-blue);
   opacity: 15%;
 }
+.bookmark-page .previouse-next .next span{float: right;}
 .manage-page .previouse-next .next span{float: right;}
+.bookmark-page .previouse-next .previouse ,
+.bookmark-page .previouse-next .next,
 .manage-page .previouse-next .previouse ,
 .manage-page .previouse-next .next {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
+.bookmark-page .previouse-next .previouse:hover .holder span,
+.bookmark-page .previouse-next .next:hover .holder span,
 .manage-page .previouse-next .previouse:hover .holder span,
 .manage-page .previouse-next .next:hover .holder span{
   text-decoration: underline;
 }
+.bookmark-page .previouse-next .previouse .holder,
 .manage-page .previouse-next .previouse .holder
 {
   margin-left: 15px;
 }
+.bookmark-page .previouse-next .next .holder,
 .manage-page .previouse-next .next .holder{
   margin-right: 15px;
 }
@@ -381,7 +404,6 @@ a{
 }
 .contact-page .contact-form .right-side form .form-item textarea{
   height: 96px;
-
 }
 .contact-page .contact-form .right-side form .form-item input,
 .contact-page .contact-form .right-side form .form-item textarea{
