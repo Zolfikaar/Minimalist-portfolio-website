@@ -237,6 +237,7 @@ a{
   flex-direction: column;
   justify-content: space-between;
 }
+.portfolio-page .section:nth-child(odd) .details,
 .portfolio-page .section:nth-child(even) .details{
   margin-left: 75px;
   margin-right: 75px;
