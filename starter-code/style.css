@@ -179,7 +179,7 @@ a{
 }
 
 .about-me{
-  margin-top: 150px !important;
+  margin-top: 150px;
   display: flex;
 }
 .about-me .profile-image{
@@ -756,51 +756,101 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   .navbar .navbar-control .close{
     display: none;
   }
-
-  .home-page .hero .details {
-    width: 514px;
-    height: 278px;
+  .home-page .hero{
+    flex-direction: column-reverse;
+    position: unset;
   }
-  .home-page .hero .details h1{margin-top: 50px;}
-  .about-me .profile-image {width: 281px;}
-  .home-page .hero .hero-image {background-image: url(./images/homepage/mobile/image-homepage-hero@2x.jpg);}
-  .about-me .profile-image {background-image: url(./images/homepage/mobile/image-homepage-profile@2x.jpg);}
-  .about-me .details{margin-left: 75px;}
-
+  .home-page .hero .details {
+    width: 100%;
+    height: 278px;
+    position: unset;
+    bottom: unset;
+  }
+    
+  .home-page .hero .details h1{margin-top: 30px; margin-bottom: 30px;padding-right: 0;}
+  .home-page .hero .hero-image {background-image: url(./images/homepage/mobile/image-homepage-hero@2x.jpg); 
+    height: 271px;
+  }
+  .about-me {
+    margin-top: 100px;
+    flex-direction: column;
+  }
+  .about-me .profile-image {
+    background-image: url(./images/homepage/mobile/image-homepage-profile@2x.jpg);
+    width: 100%;
+    height: 346px;
+    margin-bottom: 20px;
+  }
+  .about-me .details{
+    margin-left: unset;
+    width: 100%;
+  }
+  .about-me .details>div:first-child p{
+    margin: 0 20px 20px 0;
+  }
+  .contact{
+    flex-direction: column;
+  }
+  .contact h2{
+    margin-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+  }
+  .contact hr{
+    display: none;
+  }
+  footer,footer .footer-navs{height: unset;}
+  footer .footer-navs{
+    flex-direction: column;
+    line-height: 50px;
+    padding: 30px 0;
+  }
+  footer .footer-navs .footer-list{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  footer .footer-navs .footer-list .footer-logo{margin-right: unset;}
   /* Portfolio Page */
   .portfolio-page .manage,
   .portfolio-page .bookmark,
   .portfolio-page .insure,
   .portfolio-page .fylo{
     justify-content: space-between;
+    flex-direction: column;
+  }
+  .portfolio-page .section:nth-child(even) {
+    flex-direction: column;
   }
   .portfolio-page .manage .manage-image,
   .portfolio-page .bookmark .bookmark-image,
   .portfolio-page .insure .insure-image,
   .portfolio-page .fylo .fylo-image{
     background-size: cover;
-    width: 339px;
+    width: 100%;
     height: 314px;
     align-self: center;
   }
   .portfolio-page .manage .manage-image{
-    background-image: url(./images/portfolio/mobile/image-portfolio-manage.jpg);
+    background-image: url(./images/portfolio/mobile/image-portfolio-manage@2x.jpg);
   }
   .portfolio-page .bookmark .bookmark-image{
-    background-image: url(./images/portfolio/mobile/image-portfolio-bookmark.jpg);
+    background-image: url(./images/portfolio/mobile/image-portfolio-bookmark@2x.jpg);
   }
   .portfolio-page .insure .insure-image{
-    background-image: url(./images/portfolio/mobile/image-portfolio-insure.jpg);
+    background-image: url(./images/portfolio/mobile/image-portfolio-insure@2x.jpg);
   }
   .portfolio-page .fylo .fylo-image{
-    background-image: url(./images/portfolio/mobile/image-portfolio-fylo.jpg);
+    background-image: url(./images/portfolio/mobile/image-portfolio-fylo@2x.jpg);
   }
 
-  .portfolio-page .details{
-    height: 418px;
-    width: 281px;
-    margin-left: 50px;
-  }
+  .portfolio-page .section:nth-child(odd) .details, .portfolio-page .section:nth-child(even) .details {
+    margin-left: unset;
+    margin-right: unset;
+    margin-top: 30px;
+    width: 100%;
+}
   .portfolio-page .section:nth-child(odd) .details,
   .portfolio-page .section:nth-child(even) .details{
     margin-left: unset;
@@ -812,15 +862,30 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   /* Contact Page */
   .contact-page .intro, .contact-page .contact-form{flex-direction: column;}
   .contact-page .intro .left-side h2, .contact-page .contact-form .left-side h2{margin-bottom: 20px;}
-
+  .contact-page .intro .right-side, .contact-page .contact-form .right-side{
+    width: 100%;
+  }
   /* Single project page */
+  .fylo-page,
+  .insure-page,
+  .bookmark-page,
+  .manage-page{
+    margin-top: 30px;
+  }
+  .fylo-page .project-image,
+  .insure-page .project-image,
+  .bookmark-page .project-image,
+  .manage-page .project-image{
+    margin: 0 auto;
+  }
   .fylo-page .project-image .fylo-image,
   .insure-page .project-image .insure-image,
   .bookmark-page .project-image .bookmark-image,
   .manage-page .project-image .manage-image{
-    height: 500px;
+    height: 140px;
     width: 100%;
-    background-size: cover;
+    background-size: contain;
+    background-repeat: no-repeat;
   }
   .fylo-page .project-image .fylo-image{background-image: url(./images/detail/mobile/image-fylo-hero@2x.jpg);}
   .insure-page .project-image .insure-image{background-image: url(./images/detail/mobile/image-insure-hero@2x.jpg);}
@@ -832,6 +897,7 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   .bookmark-page .project-details,
   .manage-page .project-details{
     flex-direction: column;
+    margin-top: 50px;
   }
   .fylo-page .project-details .project-summary,
   .insure-page .project-details .project-summary,
@@ -853,8 +919,9 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   .bookmark-page .project-details .project-summary .details>div:first-child .short-description,
   .manage-page .project-details .project-summary .details>div:first-child .short-description{
     float: right;
-    width: 339px;
+    width: 100%;
     height: 150px;
+    margin-bottom: 50px;
   }
   .fylo-page .project-details .project-summary .details .tech-stack-info p.tech-info,
   .fylo-page .project-details .project-summary .details .tech-stack-info p.stack,
@@ -865,6 +932,7 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   .manage-page .project-details .project-summary .details .tech-stack-info p.tech-info,
   .manage-page .project-details .project-summary .details .tech-stack-info p.stack{
     font-size: 13px;
+    margin-top: unset;
   }
   .fylo-page .project-details .project-background,
   .insure-page .project-details .project-background,
@@ -873,6 +941,21 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
     width: 100%;
     margin-top: 50px;
   }
+
+  .fylo-page .project-details .project-background .project-previews .preview:first-child,
+  .insure-page .project-details .project-background .project-previews .preview:first-child,
+  .bookmark-page .project-details .project-background .project-previews .preview:first-child,
+  .manage-page .project-details .project-background .project-previews .preview:first-child,
+  .fylo-page .project-details .project-background .project-previews .preview:last-child,
+  .insure-page .project-details .project-background .project-previews .preview:last-child,
+  .bookmark-page .project-details .project-background .project-previews .preview:last-child,
+  .manage-page .project-details .project-background .project-previews .preview:last-child{
+    height: 197px;
+    width: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
   .fylo-page .project-details .project-background .project-previews .preview:first-child{background-image: url(./images/detail/mobile/image-fylo-preview-1@2x.jpg);}
   .insure-page .project-details .project-background .project-previews .preview:first-child{background-image: url(./images/detail/mobile/image-insure-preview-1@2x.jpg);}
   .bookmark-page .project-details .project-background .project-previews .preview:first-child{background-image: url(./images/detail/mobile/image-bookmark-preview-1@2x.jpg);}
@@ -881,8 +964,36 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   .fylo-page .project-details .project-background .project-previews .preview:last-child{background-image: url(./images/detail/mobile/image-fylo-preview-2@2x.jpg);}
   .insure-page .project-details .project-background .project-previews .preview:last-child{background-image: url(./images/detail/mobile/image-insure-preview-2@2x.jpg);}
   .bookmark-page .project-details .project-background .project-previews .preview:last-child{background-image: url(./images/detail/mobile/image-bookmark-preview-2@2x.jpg);}
-  .manage-page .project-details .project-background .project-previews .preview:last-child{
-  background-image: url(./images/detail/mobile/image-manage-preview-2@2x.jpg)
+  .manage-page .project-details .project-background .project-previews .preview:last-child{background-image: url(./images/detail/mobile/image-manage-preview-2@2x.jpg);}
+  
+  .fylo-page .previouse-next .previouse,
+  .insure-page .previouse-next .previouse,
+  .bookmark-page .previouse-next .previouse,
+  .manage-page .previouse-next .previouse{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .fylo-page .previouse-next .previouse .holder,
+  .insure-page .previouse-next .previouse .holder,
+  .bookmark-page .previouse-next .previouse .holder,
+  .manage-page .previouse-next .previouse .holder{
+    margin-left: unset;
+    margin-top: 15px;
+  }
+  
+  .fylo-page .previouse-next .next,
+  .insure-page .previouse-next .next,
+  .bookmark-page .previouse-next .next,
+  .manage-page .previouse-next .next {
+    align-items: flex-end;
+    flex-direction: column-reverse;
+  }
+  .fylo-page .previouse-next .next .holder,
+  .insure-page .previouse-next .next .holder,
+  .bookmark-page .previouse-next .next .holder,
+  .manage-page .previouse-next .next .holder {
+    margin-right: unset;
+    margin-top: 15px;
   }
 }
 
