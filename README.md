@@ -45,7 +45,7 @@ Users should be able to:
 
 ### Links
 
-- [Add solution URL here](https://your-solution-url.com)
+- [Solution Link](https://www.frontendmentor.io/solutions/minimalist-portfolio-website-Nr1xv4Djse)
 - [Live Preview](https://zolfikaar.github.io/Minimalist-portfolio-website/)
 
 ## My process
