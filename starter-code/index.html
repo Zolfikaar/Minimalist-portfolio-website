@@ -61,7 +61,8 @@
         <div class="details">
           <h1>Hey, I’m Alex Spencer and I love building beautiful websites</h1>
 
-          <button class="btn-primary">
+
+          <button class="btn-primary" onclick="scrollToAboutMe()">
             <span class="icon">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="14">
                 <g fill="none" fill-rule="evenodd" stroke="#5FB4A2">
@@ -73,6 +74,7 @@
             </span>
             <span>About Me</span>
           </button>
+
         </div>
 
         <div class="hero-image">
@@ -82,7 +84,7 @@
 
       </div>
 
-      <div class="section about-me">
+      <div class="section about-me" id="about-me">
         <div class="profile-image">
         </div>
 
@@ -180,6 +182,12 @@
       close.style.display = 'none'
       navbar.style.display = 'none'
     })
+
+
+    function scrollToAboutMe() {
+      var elmnt = document.getElementById("about-me");
+      elmnt.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   </script>
 
 </body>

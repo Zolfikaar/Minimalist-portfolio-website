@@ -528,6 +528,12 @@ a{
   border: none;
   padding: 10px;
 }
+.contact-page .contact-form .right-side form .form-item .error.valid-email,
+.contact-page .contact-form .right-side form .form-item .error{
+  color: red;
+  float: right;
+  display: none;
+}
 .contact-page .contact-form .right-side form button{
   color: #fff;
   text-transform: uppercase;
