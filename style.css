@@ -252,6 +252,7 @@ a{
   background-image: url(./images/portfolio/desktop/image-portfolio-fylo.jpg);
 }
 .portfolio-page .details{
+  width: 350px;
   height: 500px;
   margin-left: 150px;
   display: flex;
@@ -544,6 +545,8 @@ footer {
   background-color: var(--gray-dark-blue);
   margin-top: 150px !important;
   height: 80px;
+  height: -moz-available;
+  height: fill-available;
 }
 footer .footer-navs {
   display: flex;
@@ -725,7 +728,7 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
 }
 
 /* mobile screen */
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 431px) {
   body{font-size: 15px;}
   .container{width: 311px;}
   h1{
@@ -806,8 +809,13 @@ footer .footer-navs .footer-socials .footer-socials-item svg:hover path{
   .contact hr{
     display: none;
   }
-  footer,footer .footer-navs{height: unset;}
+  footer{
+    height: 560px;
+    height: -moz-available;
+    height: fill-available;
+  }
   footer .footer-navs{
+    height: unset;
     flex-direction: column;
     line-height: 50px;
     padding: 30px 0;
